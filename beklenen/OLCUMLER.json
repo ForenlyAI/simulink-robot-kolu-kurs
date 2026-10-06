@@ -1,0 +1,696 @@
+{
+  "d1_1_hedef_derece": [
+    -34.72,
+    -17.11,
+    -17.31,
+    -21.19
+  ],
+  "d1_1_son_derece": [
+    -31.59,
+    -16.18,
+    -17.31,
+    -17.02
+  ],
+  "d1_1_kalan_derece": [
+    -3.14,
+    -0.92,
+    0,
+    -4.17
+  ],
+  "d1_1_boyut": 4,
+  "d1_1_tork_max": [
+    25,
+    25,
+    12.08,
+    14.79
+  ],
+  "d1_2_J": [
+    0.2085,
+    0.1214,
+    0.1077,
+    0.0976
+  ],
+  "d1_2_dogal_frekans": [
+    21.9,
+    28.69,
+    19.27,
+    20.24
+  ],
+  "d1_2_sonum_orani": [
+    0.548,
+    0.717,
+    0.482,
+    0.506
+  ],
+  "d1_2_dirsek_son_kp40_kp80": [
+    -17.02,
+    -19.12
+  ],
+  "d1_3_kok_hata": [
+    2.58,
+    0.43,
+    0.67,
+    3.74
+  ],
+  "d1_3_en_buyuk": [
+    4.42,
+    7.13,
+    11.78,
+    19.67
+  ],
+  "d1_3_tork_max": [
+    6.22,
+    3.32,
+    4,
+    6.98
+  ],
+  "d1_4_kok_hata": [
+    0.42,
+    0.25,
+    0.67,
+    0.98
+  ],
+  "d1_4_en_buyuk": [
+    4.4,
+    6.45,
+    11.78,
+    15.49
+  ],
+  "d1_4_dusus_yuzde": [
+    84,
+    41,
+    0,
+    74
+  ],
+  "d1_4_G_tasima_Nm": [
+    -5.01,
+    -0.22,
+    0,
+    -2.19
+  ],
+  "d1_4_tork_max": [
+    6.34,
+    3.48,
+    4,
+    6.93
+  ],
+  "d2_1_hiz_max": [
+    0.758,
+    0.373,
+    0.378,
+    0.462
+  ],
+  "d2_1_tork_max_basamak": [
+    25,
+    25,
+    12.08,
+    17.64
+  ],
+  "d2_1_tork_max_yumusak": [
+    5.64,
+    1.69,
+    0.09,
+    3.1
+  ],
+  "d2_1_asim_basamak": [
+    12.3,
+    4.6,
+    17.8,
+    15.5
+  ],
+  "d2_1_asim_yumusak": [
+    0.12,
+    0.03,
+    0.21,
+    0.18
+  ],
+  "d2_2_asim_korumasiz": [
+    32.3,
+    13.5,
+    32.2,
+    30.4
+  ],
+  "d2_2_asim_korumali": [
+    0,
+    0,
+    21.4,
+    9
+  ],
+  "d2_2_son_hata_korumali": [
+    -0.005,
+    -0.003,
+    0,
+    0.003
+  ],
+  "d2_3_yontem": "MATLAB Function bloğu",
+  "d2_3_blok_fonksiyon_fark_m": 0,
+  "d2_3_p_sifir": [
+    0.1998,
+    -0.1486,
+    0.0953
+  ],
+  "d2_3_p_uzanma": [
+    0.2286,
+    -0.2043,
+    0.3105
+  ],
+  "d2_3_p_tasima": [
+    0.1675,
+    -0.13,
+    0.2929
+  ],
+  "d2_3_bilek_aralik_m": [
+    0.198,
+    0.16,
+    0.335
+  ],
+  "d2_4_model_kayit_cm": 5.14,
+  "d2_4_kok_cm": [
+    5.13,
+    4.45,
+    0.94,
+    0.21
+  ],
+  "d2_4_denetleyici_payi_cm": 0.37,
+  "d2_4_en_buyuk_cm": 8.74,
+  "d3_1_kok_surekli": [
+    0.42,
+    0.25,
+    0.67,
+    0.98
+  ],
+  "d3_1_kok_ayrik": [
+    0.4,
+    0.24,
+    0.62,
+    0.94
+  ],
+  "d3_1_tork_max": [
+    7.09,
+    3.95,
+    4.64,
+    8.13
+  ],
+  "d3_1_Ts": [
+    0.005,
+    0.02,
+    0.03,
+    0.04
+  ],
+  "d3_1_salinim_derece": [
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0.05,
+      15.08,
+      0,
+      0.01
+    ],
+    [
+      16.94,
+      31.4,
+      4.78,
+      13.65
+    ]
+  ],
+  "d3_2_sigma_derece": 0.3,
+  "d3_2_alfa": [
+    1,
+    0.8,
+    0.6,
+    0.5
+  ],
+  "d3_2_kok": [
+    [
+      0.5,
+      0.51,
+      0.67,
+      0.97
+    ],
+    [
+      0.51,
+      0.61,
+      0.64,
+      0.92
+    ],
+    [
+      0.59,
+      1.59,
+      0.63,
+      0.9
+    ],
+    [
+      0.79,
+      10.09,
+      0.71,
+      1.08
+    ]
+  ],
+  "d3_2_titreme_Nm": [
+    [
+      3.09,
+      3.79,
+      1.18,
+      1.22
+    ],
+    [
+      2.21,
+      2.85,
+      0.84,
+      0.87
+    ],
+    [
+      1.56,
+      3.46,
+      0.58,
+      0.62
+    ],
+    [
+      1.39,
+      10.01,
+      0.48,
+      0.56
+    ]
+  ],
+  "d3_3_gecikme_ms": [
+    0,
+    5,
+    10,
+    15,
+    20
+  ],
+  "d3_3_kok": [
+    [
+      0.4,
+      0.24,
+      0.62,
+      0.94
+    ],
+    [
+      0.42,
+      0.25,
+      0.61,
+      0.96
+    ],
+    [
+      0.44,
+      6.47,
+      0.61,
+      0.98
+    ],
+    [
+      4.28,
+      13.05,
+      0.62,
+      1.09
+    ],
+    [
+      12.02,
+      24.68,
+      16.14,
+      19.62
+    ]
+  ],
+  "d3_3_sinir_ms": [
+    15,
+    10,
+    20,
+    20
+  ],
+  "d3_4_J_carpani": [
+    0.7,
+    1,
+    1.3
+  ],
+  "d3_4_surtunme": [
+    [
+      0,
+      0
+    ],
+    [
+      0.1,
+      0.2
+    ],
+    [
+      0.3,
+      0.6
+    ]
+  ],
+  "d3_4_en_kotu_kok": [
+    [
+      0.87,
+      1,
+      1.26
+    ],
+    [
+      0.94,
+      1.05,
+      1.3
+    ],
+    [
+      1.03,
+      1.12,
+      1.34
+    ]
+  ],
+  "d3_4_kok_dirsek": [
+    [
+      0.87,
+      1,
+      1.26
+    ],
+    [
+      0.94,
+      1.05,
+      1.3
+    ],
+    [
+      1.03,
+      1.12,
+      1.34
+    ]
+  ],
+  "d4_1_ideal": [
+    {
+      "eklem": "omuz pitch",
+      "kok_hata_derece": 0.4,
+      "en_buyuk_derece": 4.26,
+      "tork_max_Nm": 7.12,
+      "sinir_Nm": 25,
+      "hata_tamam": true,
+      "tork_tamam": true,
+      "gecti": true
+    },
+    {
+      "eklem": "omuz roll",
+      "kok_hata_derece": 0.24,
+      "en_buyuk_derece": 6.04,
+      "tork_max_Nm": 3.96,
+      "sinir_Nm": 25,
+      "hata_tamam": true,
+      "tork_tamam": true,
+      "gecti": true
+    },
+    {
+      "eklem": "omuz yaw",
+      "kok_hata_derece": 0.62,
+      "en_buyuk_derece": 11.14,
+      "tork_max_Nm": 4.66,
+      "sinir_Nm": 25,
+      "hata_tamam": true,
+      "tork_tamam": true,
+      "gecti": true
+    },
+    {
+      "eklem": "dirsek",
+      "kok_hata_derece": 0.94,
+      "en_buyuk_derece": 14.89,
+      "tork_max_Nm": 8.15,
+      "sinir_Nm": 25,
+      "hata_tamam": true,
+      "tork_tamam": true,
+      "gecti": true
+    }
+  ],
+  "d4_1_ideal_gecti": true,
+  "d4_1_gurultu_gecikme": [
+    {
+      "eklem": "omuz pitch",
+      "kok_hata_derece": 0.69,
+      "en_buyuk_derece": 4.68,
+      "tork_max_Nm": 16.67,
+      "sinir_Nm": 25,
+      "hata_tamam": true,
+      "tork_tamam": true,
+      "gecti": true
+    },
+    {
+      "eklem": "omuz roll",
+      "kok_hata_derece": 6.42,
+      "en_buyuk_derece": 12.91,
+      "tork_max_Nm": 25,
+      "sinir_Nm": 25,
+      "hata_tamam": false,
+      "tork_tamam": false,
+      "gecti": false
+    },
+    {
+      "eklem": "omuz yaw",
+      "kok_hata_derece": 0.73,
+      "en_buyuk_derece": 10.98,
+      "tork_max_Nm": 6.88,
+      "sinir_Nm": 25,
+      "hata_tamam": true,
+      "tork_tamam": true,
+      "gecti": true
+    },
+    {
+      "eklem": "dirsek",
+      "kok_hata_derece": 1.04,
+      "en_buyuk_derece": 16.65,
+      "tork_max_Nm": 9.64,
+      "sinir_Nm": 25,
+      "hata_tamam": true,
+      "tork_tamam": true,
+      "gecti": true
+    }
+  ],
+  "d4_1_gurultu_gecikme_gecti": false,
+  "d4_2_kp_carpani": [
+    0.75,
+    0.5,
+    1,
+    1
+  ],
+  "d4_2_kd_carpani": [
+    0.75,
+    0.5,
+    1,
+    1
+  ],
+  "d4_2_kok_secilen": [
+    0.61,
+    0.52,
+    0.73,
+    1.04
+  ],
+  "d4_2_kok_kart": [
+    0.69,
+    6.42,
+    0.73,
+    1.04
+  ],
+  "d4_2_kok_omuz_roll": [
+    [
+      16.16,
+      0.52,
+      0.63,
+      1.16
+    ],
+    [
+      2407.74,
+      4.84,
+      1.66,
+      4.79
+    ],
+    [
+      4052.14,
+      38.88,
+      8.5,
+      6.42
+    ],
+    [
+      6135.27,
+      2105.54,
+      42.48,
+      13.16
+    ]
+  ],
+  "d4_3_rapor_dosyalari": [
+    "izleme.png",
+    "olcut.png",
+    "rapor.html",
+    "sonuc.csv"
+  ],
+  "d4_3_gecti": true,
+  "d4_3_sonuc": [
+    {
+      "eklem": "omuz pitch",
+      "kok_hata_derece": 0.61,
+      "en_buyuk_derece": 5.4,
+      "tork_max_Nm": 11.88,
+      "sinir_Nm": 25,
+      "hata_tamam": true,
+      "tork_tamam": true,
+      "gecti": true
+    },
+    {
+      "eklem": "omuz roll",
+      "kok_hata_derece": 0.52,
+      "en_buyuk_derece": 7.36,
+      "tork_max_Nm": 7.29,
+      "sinir_Nm": 25,
+      "hata_tamam": true,
+      "tork_tamam": true,
+      "gecti": true
+    },
+    {
+      "eklem": "omuz yaw",
+      "kok_hata_derece": 0.73,
+      "en_buyuk_derece": 11.01,
+      "tork_max_Nm": 6.92,
+      "sinir_Nm": 25,
+      "hata_tamam": true,
+      "tork_tamam": true,
+      "gecti": true
+    },
+    {
+      "eklem": "dirsek",
+      "kok_hata_derece": 1.05,
+      "en_buyuk_derece": 16.66,
+      "tork_max_Nm": 9.62,
+      "sinir_Nm": 25,
+      "hata_tamam": true,
+      "tork_tamam": true,
+      "gecti": true
+    }
+  ],
+  "d4_4_sonuc": [
+    {
+      "ayar": "kart ayarı",
+      "en_kotu_eklem_hata_derece": 6.42,
+      "en_buyuk_tork_Nm": 25,
+      "gecti": false
+    },
+    {
+      "ayar": "taramayla seçilen ayar",
+      "en_kotu_eklem_hata_derece": 1.05,
+      "en_buyuk_tork_Nm": 11.88,
+      "gecti": true
+    }
+  ],
+  "d4_4_kart_ayari": [
+    {
+      "eklem": "omuz pitch",
+      "kok_hata_derece": 0.69,
+      "en_buyuk_derece": 4.68,
+      "tork_max_Nm": 16.67,
+      "sinir_Nm": 25,
+      "hata_tamam": true,
+      "tork_tamam": true,
+      "gecti": true
+    },
+    {
+      "eklem": "omuz roll",
+      "kok_hata_derece": 6.42,
+      "en_buyuk_derece": 12.91,
+      "tork_max_Nm": 25,
+      "sinir_Nm": 25,
+      "hata_tamam": false,
+      "tork_tamam": false,
+      "gecti": false
+    },
+    {
+      "eklem": "omuz yaw",
+      "kok_hata_derece": 0.73,
+      "en_buyuk_derece": 10.98,
+      "tork_max_Nm": 6.88,
+      "sinir_Nm": 25,
+      "hata_tamam": true,
+      "tork_tamam": true,
+      "gecti": true
+    },
+    {
+      "eklem": "dirsek",
+      "kok_hata_derece": 1.04,
+      "en_buyuk_derece": 16.65,
+      "tork_max_Nm": 9.64,
+      "sinir_Nm": 25,
+      "hata_tamam": true,
+      "tork_tamam": true,
+      "gecti": true
+    }
+  ],
+  "d4_4_secilen_ayar": [
+    {
+      "eklem": "omuz pitch",
+      "kok_hata_derece": 0.61,
+      "en_buyuk_derece": 5.4,
+      "tork_max_Nm": 11.88,
+      "sinir_Nm": 25,
+      "hata_tamam": true,
+      "tork_tamam": true,
+      "gecti": true
+    },
+    {
+      "eklem": "omuz roll",
+      "kok_hata_derece": 0.52,
+      "en_buyuk_derece": 7.36,
+      "tork_max_Nm": 7.29,
+      "sinir_Nm": 25,
+      "hata_tamam": true,
+      "tork_tamam": true,
+      "gecti": true
+    },
+    {
+      "eklem": "omuz yaw",
+      "kok_hata_derece": 0.73,
+      "en_buyuk_derece": 11.01,
+      "tork_max_Nm": 6.92,
+      "sinir_Nm": 25,
+      "hata_tamam": true,
+      "tork_tamam": true,
+      "gecti": true
+    },
+    {
+      "eklem": "dirsek",
+      "kok_hata_derece": 1.05,
+      "en_buyuk_derece": 16.66,
+      "tork_max_Nm": 9.62,
+      "sinir_Nm": 25,
+      "hata_tamam": true,
+      "tork_tamam": true,
+      "gecti": true
+    }
+  ],
+  "d4_4_senaryo": {
+    "gurultu_derece": 0.3,
+    "gecikme_ms": 10,
+    "ornekleme_Hz": 50,
+    "olcut_derece": 1.5
+  },
+  "d2_2_asim_basamak01": [
+    12.3,
+    4.6,
+    17.8,
+    15.5
+  ],
+  "d2_2_tork_max_basamak01": [
+    25,
+    25,
+    12.08,
+    17.64
+  ],
+  "d2_2_tork_max_hizsinir": [
+    8.48,
+    3.76,
+    2.63,
+    5.22
+  ],
+  "d2_2_asim_hizsinir": [
+    3.7,
+    2.4,
+    12.5,
+    8.9
+  ]
+}
