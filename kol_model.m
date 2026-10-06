@@ -18,9 +18,11 @@ function kol_model(mdl, varargin)
 %   'gecikme'   true: torka Transport Delay (gecikme s)                                     (Ders 3.3)
 %   'surtunme'  true: viskoz (bv) ve kuru (fc) sürtünme                                     (Ders 3.4)
 %   'hizref'    true: hız hatası kayıttaki hıza göre (refhiz) — isteğe bağlı, derslerde kullanılmaz
+%   'adim'      basamak zamanı [s] (metin, varsayılan '0'); Rate Limiter ilk adımda girişi doğrudan geçirir,
+%               hız sınırının görünmesi için basamak t > 0 olmalı                            (Ders 2.2)
 %   'sure'      benzetim süresi (metin)
 S = struct('kaynak','basamak','demux',false,'ileri',false,'hizsiniri',false,'integral','yok','kinematik',false, ...
-    'ayrik',false,'gurultu',false,'filtre',false,'gecikme',false,'surtunme',false,'hizref',false,'sure','2');
+    'ayrik',false,'gurultu',false,'filtre',false,'gecikme',false,'surtunme',false,'hizref',false,'adim','0','sure','2');
 for i = 1:2:numel(varargin), S.(varargin{i}) = varargin{i+1}; end
 if S.filtre && ~S.ayrik, error('kol_model: filtre seçeneği ayrik ile birlikte kullanılır'); end
 if bdIsLoaded(mdl), close_system(mdl, 0); end
@@ -34,7 +36,7 @@ if strcmp(S.kaynak, 'basamak')
     adlar = {'omuz pitch', 'omuz roll', 'omuz yaw', 'dirsek'};
     ekle([L 'Signal Routing/Mux'], 'Mux', [110 40 115 180], 'Inputs', '4');
     for i = 1:4
-        ekle([L 'Sources/Step'], ['Hedef ' adlar{i}], [30 30+38*(i-1) 60 56+38*(i-1)], 'Time', '0', ...
+        ekle([L 'Sources/Step'], ['Hedef ' adlar{i}], [30 30+38*(i-1) 60 56+38*(i-1)], 'Time', S.adim, ...
             'Before', sprintf('aci0(%d)', i), 'After', sprintf('hedef(%d)', i));
         bagla(['Hedef ' adlar{i} '/1'], sprintf('Mux/%d', i));
     end

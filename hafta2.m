@@ -34,15 +34,23 @@ close_system('kol_yorunge', 0);
 
 %% 2.2 Hız sınırı, tork doyumu ve integral sarması (anti-windup)
 % (a) Rate Limiter: hedef en çok hizlim = 2 rad/s hızla değişir (ÖRNEK servis hızı; kartın eklem hız sınırı 37 rad/s)
-kol_model('kol_hizsinir', 'kaynak', 'basamak', 'ileri', true, 'hizsiniri', true, 'sure', '2.5');
-oH = sim('kol_hizsinir'); asH = 100 * (max(oH.aci.Data ./ uzanma, [], 1) - 1);
+% Rate Limiter ilk adımda girişi doğrudan geçirir: t = 0 basamağını sınırlayamaz. Bu yüzden iki koşumda da basamak t = 0,1 s'de.
+kol_model('kol_basamak01', 'kaynak', 'basamak', 'ileri', true, 'adim', '0.1', 'sure', '2.5');
+kol_model('kol_hizsinir', 'kaynak', 'basamak', 'ileri', true, 'hizsiniri', true, 'adim', '0.1', 'sure', '2.5'); model_ciz('kol_hizsinir', '2.2', 'hiz-siniri-model');
+oB1 = sim('kol_basamak01'); oH = sim('kol_hizsinir');
+asB1 = 100 * (max(oB1.aci.Data ./ uzanma, [], 1) - 1); asH = 100 * (max(oH.aci.Data ./ uzanma, [], 1) - 1);
+tkB1 = max(abs(oB1.tork.Data), [], 1); tkH = max(abs(oH.tork.Data), [], 1);
 fig = yeni_sekil;
-subplot(2, 1, 1); plot(oB.aci.Time, rad2deg(oB.aci.Data(:, 1))); hold on; plot(oH.aci.Time, rad2deg(oH.aci.Data(:, 1))); plot(oH.hedefk.Time, rad2deg(oH.hedefk.Data(:, 1)), 'k:');
+subplot(2, 1, 1); plot(oB1.aci.Time, rad2deg(oB1.aci.Data(:, 1))); hold on; plot(oH.aci.Time, rad2deg(oH.aci.Data(:, 1))); plot(oH.hedefk.Time, rad2deg(oH.hedefk.Data(:, 1)), 'k:');
 grid on; ylabel('omuz pitch [°]'); legend('basamak hedef', 'hız sınırlı hedef (2 rad/s, ÖRNEK)', 'sınırlanmış hedef', 'Location', 'northeast');
-title('Rate Limiter: hedef basamak yerine rampa olur');
-subplot(2, 1, 2); plot(oB.tork.Time, oB.tork.Data(:, 1)); hold on; plot(oH.tork.Time, oH.tork.Data(:, 1)); yline(-25, '--r', 'tork sınırı', 'FontSize', 13);
-grid on; ylabel('tork [N·m]'); xlabel('zaman [s]'); xlim([0 2.5]); sekil(fig, '2.2', 'hiz-siniri');
-olc('d2_2_tork_max_hizsinir', round(max(abs(oH.tork.Data), [], 1), 2)); olc('d2_2_asim_hizsinir', round(asH, 1));
+title(sprintf('Omuz pitch: aşım %%%.0f → %%%.1f, en büyük tork %.0f → %.1f N·m', asB1(1), asH(1), tkB1(1), tkH(1)));
+subplot(2, 1, 2); plot(oB1.tork.Time, oB1.tork.Data(:, 1)); hold on; plot(oH.tork.Time, oH.tork.Data(:, 1)); yline(-25, '--r', 'tork sınırı', 'FontSize', 13);
+grid on; ylabel('tork [N·m]'); xlabel('zaman [s]'); xlim([0 2.5]); ylim([-28 14]); legend('basamak hedef', 'hız sınırlı hedef', 'Location', 'northeast'); sekil(fig, '2.2', 'hiz-siniri');
+assignin('base', 'oB1', oB1); assignin('base', 'oH', oH); assignin('base', 'uzanma', uzanma);
+komut('2.2', 'hiz-siniri-olcum', {'hizlim', 'asim_basamak = round(100 * (max(oB1.aci.Data ./ uzanma) - 1), 1)', ...
+    'asim_hiz_sinirli = round(100 * (max(oH.aci.Data ./ uzanma) - 1), 1)', 'tork_basamak = round(max(abs(oB1.tork.Data)), 1)', 'tork_hiz_sinirli = round(max(abs(oH.tork.Data)), 1)'});
+olc('d2_2_asim_basamak01', round(asB1, 1)); olc('d2_2_tork_max_basamak01', round(tkB1, 2));
+olc('d2_2_tork_max_hizsinir', round(tkH, 2)); olc('d2_2_asim_hizsinir', round(asH, 1));
 % (b) İntegral sarması: büyük bir hareket (ÖRNEK), ileri besleme yok, integral var; tork doyumdayken integral birikir
 buyuk = deg2rad([-90 -60 60 90]); assignin('base', 'hedef', buyuk); assignin('base', 'ki', 2 * P.kp);
 kol_model('kol_sarma', 'kaynak', 'basamak', 'integral', 'sarmali', 'sure', '4');
@@ -61,7 +69,7 @@ komut('2.2', 'sarma-olcum', {'ki = 2 * P.kp', 'hedef = deg2rad([-90 -60 60 90]);
 olc('d2_2_asim_korumasiz', round(as1, 1)); olc('d2_2_asim_korumali', round(as2, 1));
 olc('d2_2_son_hata_korumali', round(rad2deg(buyuk - o2.aci.Data(end, :)), 3));
 assignin('base', 'hedef', uzanma); assignin('base', 'ki', 0);
-close_system('kol_basamak', 0); close_system('kol_hizsinir', 0); close_system('kol_sarma', 0); close_system('kol_koruma', 0);
+close_system('kol_basamak', 0); close_system('kol_hizsinir', 0); close_system('kol_basamak01', 0); close_system('kol_sarma', 0); close_system('kol_koruma', 0);
 
 %% 2.3 MATLAB Function bloğu ile ileri kinematik: bilek konumu modelin içinde
 komut('2.3', 'bilek-fonksiyonu', {'type bilek_konumu'});
