@@ -1,0 +1,9 @@
+parca,kutle_kg,uzaklik_omuz_pitch_m,uzaklik_omuz_roll_m,uzaklik_omuz_yaw_m,uzaklik_dirsek_m
+omuz pitch parçası,0.718,0.012,0.0,0.0,0.0
+omuz roll parçası,0.643,0.077,0.064,0.0,0.0
+üst kol,0.734,0.183,0.175,0.011,0.0
+ön kol,0.6,0.219,0.194,0.081,0.066
+bilek roll parçası,0.0854,0.242,0.194,0.133,0.118
+bilek pitch parçası,0.484,0.269,0.195,0.177,0.161
+bilek yaw parçası,0.226,0.342,0.195,0.275,0.26
+el (VARSAYIM),0.4,0.37,0.184,0.316,0.3

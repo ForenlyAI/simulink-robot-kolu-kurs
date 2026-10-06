@@ -1,0 +1,23 @@
+# Simulink ile Robot Kolu Kontrolü — laboratuvar ortamı (L1)
+matlab: "R2026b (26.2.0.3386108)"
+urunler: [MATLAB, Simulink]
+arac_kutusu: yok   # Control System Toolbox, Robotics System Toolbox, Simscape KULLANILMAZ
+kurulum: "MathWorks paket yöneticisi (mpm): mpm install --release=R2026b --products MATLAB Simulink"
+lisans_ekip: "MathWorks deneme lisansı, 2026-10-05"
+lisans_ogrenci: "kendi MATLAB lisansı ya da MathWorks 30 günlük deneme"
+calistirma: "lab_calistir.m — hafta1–4.m sırayla; günlük cikti/kosum.log; ölçümler OLCUMLER.json; komut kayıtları için ardından python3 komut_ciz.py"
+veri:
+  kayit: "veri/cay_servisi_kd_v017_81_0013.hdf5 — yalnız labın kullandığı alanlar (eklem açısı, eklem hızı, sağ bilek duruşu, başarı); Forenly kıraathane G1 çay servisi BENZETİM KAYDI (Isaac Lab, 5666 örnek × 0,02 s)"
+  parametre: "veri/g1_sag_kol_parametre.csv — dört eklem: kayıt satırı, kp, kd, armatür, tork/hız/açı sınırı (eklem kartı), yerçekimi katsayıları (URDF)"
+  kutle: "veri/g1_sag_kol_kutle.csv — kolun sekiz parçası: kütle ve her eklem eksenine dik uzaklık (URDF; el 0,4 kg VARSAYIM)"
+kayit_satirlari:   # h5read ile okunan joint_position 53×5666; satır = eklem (Isaac eklem sırası, isaac_eklem_sirasi.json)
+  sag_omuz_pitch: 13
+  sag_omuz_roll: 17
+  sag_omuz_yaw: 21
+  sag_dirsek: 23
+  bel_yaw_roll_pitch: [3, 6, 9]
+  sag_bilek_roll_pitch_yaw: [25, 27, 29]
+  dogrulama: "bu satırlarla hesaplanan ileri kinematik, kayıttaki bilek konumunu 0,2 cm karesel ortalama farkla veriyor (2026-10-05, numpy)"
+model: "BASİTLEŞTİRİLMİŞ — dört eklem birbirinden bağımsız; J = Σ m·r² + armatür (duruş: bütün eklemler sıfır); yerçekimi yalnız eklemin kendi açısına bağlı"
+ornek_degerler: "ÖRNEK etiketli (kayıttan/karttan gelmeyen): hız sınırı 2 rad/s, integral kazancı 2·kp, sarma zaman sabiti 0,05 s, gürültü 0,3°, gecikme 10 ms, sürtünme düzeyleri"
+kosum: "2026-10-06 — dört hafta TAMAM (temiz koşum, hata 0); ölçümler beklenen/OLCUMLER.json"

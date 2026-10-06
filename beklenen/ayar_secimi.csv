@@ -1,0 +1,5 @@
+eklem,kp_carpani,kd_carpani,kp,kd,kart_ayari_hata,secilen_ayar_hata
+omuz pitch,0.75,0.75,75,3.75,0.69,0.61
+omuz roll,0.5,0.5,50,2.5,6.42,0.52
+omuz yaw,1,1,40,2,0.73,0.73
+dirsek,1,1,40,2,1.04,1.04
